@@ -8,9 +8,24 @@ h1 {
 }
 
 h1.sticky{
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: green;
+}
+
+h2{
+    color: greenyellow;
+}
+h2.sticky{
+    position: absolute;
+    top: 0;
+    background-color: green;
+}
+
+div.sticky{
+    position: sticky;
+    top: 0;
+    background-color: greenyellow;
 }
 
 p {
