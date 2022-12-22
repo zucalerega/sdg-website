@@ -4,6 +4,13 @@ body{
 
 h1 {
     color: blue;
+    border: 5px solid #00aeff
+}
+
+h1.sticky{
+    position: sticky;
+    top: 0;
+    background-color: green;
 }
 
 p {
