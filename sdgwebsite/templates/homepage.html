@@ -45,6 +45,13 @@
         </h3>
         <p style="width: 20%">To create a website that allows anyone, especially someone with no STEM or political background, to find information about climate change and climate science in understandable, everyday terms.
         </p>
+        {% for article in articles %}
+        <p>
+         {{article.title}}
+         {{article.sources}}
+
+        </p>
+        {% endfor %}
       </div>
     </body>
 </html>

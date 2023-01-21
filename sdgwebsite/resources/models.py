@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 # Create your models here.
 class Source(models.Model):
     link = models.CharField(max_length=1_000, blank=True, null=True)
@@ -24,7 +23,10 @@ class Article(models.Model):
     date_published = models.DateField(auto_now=True)
     # want to have set categories to choose from for sorting purposes
     topic = models.CharField(max_length=100, blank=True, null=True)
-
+    # stores content of article
+    content = models.TextField(null=True)
+    # creates unique id for article
+    unique_id = models.CharField(max_length=8, blank=True, null=True)
     def __str__(self):
         return self.title
 

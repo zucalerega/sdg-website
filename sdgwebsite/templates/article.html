@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{article.title}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="#">Logo</a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h1 class="title">{{article.title}}</h1>
+      <div class="meta">
+        <span class="author">{{article.author}}</span>
+        <span class="date">{{article.date_published}}</span>
+        {%for source in sources%}
+        <a href="{{source.link}}">{{source.name}}</a>
+        {% endfor %}
+      </div>
+      <div class="content">
+        <p>{{article.content}}</p>
+        <p>Additional paragraphs can be added here.</p>
+        <img src="image.jpg" alt="Article Image">
+        <p>Additional content can be added here as well.</p>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <p>Copyright ©2022 Luca Zerege</p>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

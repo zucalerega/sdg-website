@@ -1,0 +1,132 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Global Styles */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center; /* added */
+}
+
+/* Header Styles */
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    float: left;
+    padding: 15px 0;
+}
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    float: right;
+}
+nav ul {
+    display: flex;
+}
+nav li {
+    margin-left: 20px;
+}
+nav a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    padding: 15px 0;
+}
+nav a:hover {
+    color: #23527c;
+}
+
+/* Article Styles */
+/* Article Styles */
+.content {
+    text-align: justify; /* added */
+    margin: 50px auto; /* added */
+    max-width: 800px; /* added */
+}
+.content p {
+    margin: 1.5em 0; /* added */
+}
+.title {
+    margin: 50px auto; /*modified */
+    text-align: center; /* added */
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.meta {
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: center; /* added */
+}
+.meta .author {
+    margin-right: 10px;
+}
+
