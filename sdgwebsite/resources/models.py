@@ -25,6 +25,8 @@ class Article(models.Model):
     topic = models.CharField(max_length=100, blank=True, null=True)
     # stores content of article
     content = models.TextField(null=True)
+    # stores images for article
+    visuals = models.FileField(upload_to='uploads/')
     # creates unique id for article
     unique_id = models.CharField(max_length=8, blank=True, null=True)
     def __str__(self):
