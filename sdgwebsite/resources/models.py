@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+import string
+import random
 
 # Create your models here.
 class Source(models.Model):
@@ -16,7 +18,7 @@ class Article(models.Model):
     # blank and null prevent database errors
     title = models.CharField(max_length=250, blank=True, null=True)
     # user saved as author, idk if we should cascade, that will delete the article if the account is
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.CharField(max_length=250, blank=True, null=True)
     # source can have multiple Articles and Article can have multiple Sources
     sources = models.ManyToManyField(Source)
     # automatically records the most recent update
@@ -26,9 +28,9 @@ class Article(models.Model):
     # stores content of article
     content = models.TextField(null=True)
     # stores images for article
-    visuals = models.FileField(upload_to='uploads/')
+    visuals = models.FileField(upload_to='uploads/', null=True)
     # creates unique id for article
-    unique_id = models.CharField(max_length=8, blank=True, null=True)
+    unique_id = models.CharField(max_length=8, default=''.join(random.choices(string.ascii_letters, k=8)))
     def __str__(self):
         return self.title
 

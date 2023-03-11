@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from resources.models import Article, Source
-
+from .forms import ArticleForm
+from django.contrib import messages
 # Create your views here.
 def homepage_view(request):
     articles = Article.objects.all()
@@ -19,3 +20,22 @@ def article_home_view(request):
 
     context = {"articles": articles}
     return render(request, "articlehome.html", context)
+
+def publish_article(request):
+    form = ArticleForm(request.POST or None)
+    if form.is_valid():
+        # form.save()
+        article = Article.objects.create(title=form.cleaned_data.get('title'), 
+                                         author=form.cleaned_data.get('author'),
+                                         content=form.cleaned_data.get('content'),
+                                         visuals=form.cleaned_data.get('visuals'),
+                                         topic=form.cleaned_data.get('topic')
+                                         )
+        article.save()
+        return redirect('resources:homepage_view')
+
+    messages.success(request, f'Article published!')
+    context = {'form': form}
+    return render(request, "publish.html", context)
+    # return redirect('resources:hompage_view')
+
