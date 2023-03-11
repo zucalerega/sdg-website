@@ -11,24 +11,12 @@
         SDGsite
     </header>
     <div class="sticky" style="height:50px">
-      <div style="float:left; width: 20%; text-align: left;">  
+      <div class="header">  
         <h2 style="margin:10px">Home</h2>
       </div>
       
-      <div style="float:left; width: 20%">
-        <h2 style="margin: 10px;">About</h2>
-      </div>
-      
-      <div style="float:left; width:20%">
-        <a style="margin: 10px;" href="{% url 'resources:article_home_view' %}">Articles</a>
-      </div>
-      
-      <div style="float:left; width:20%">
-        <h2 style="margin: 10px;">Resources</h2>
-      </div>
-      
-      <div style="float:left; width: 10%">
-        <h2 style="margin: 10px;">Help</h2>
+      <div class="header">
+        <a class="header" href="{% url 'resources:article_home_view' %}">Articles</a>
       </div>
       
       <div style="float:left; width:10%">
@@ -38,9 +26,12 @@
     </div>
     
     <body>
-        <h1 style="text-align: center; font-size: 40px; background-color: black">Our Mission</h1>
-      <div style="background-color: black">
-        <h3 style="font-size: 30px; color: rgb(255, 123, 0); background-color: black">
+      <div class="statement">
+        <h1 style="text-align: center; font-size: 40px;">Our Mission</h1>
+      </div>
+      
+      <div>
+        <h3 style="font-size: 30px;">
           Goal:
         </h3>
         <p style="width: 20%">To create a website that allows anyone, especially someone with no STEM or political background, to find information about climate change and climate science in understandable, everyday terms.
