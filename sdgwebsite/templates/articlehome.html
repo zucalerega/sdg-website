@@ -1,4 +1,9 @@
 {% load static %}
 {% for article in articles %}
-{{article.title}}
+<div>
+    <a href="{% url 'resources:article_view' article.unique_id %}">
+        <h1>{{article.title}} | {{article.topic}}</h1>
+        <h3>{{article.author}} | {{article.date_published}}</h3>
+    </a>
+</div>
 {% endfor %}
