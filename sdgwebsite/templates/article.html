@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type='text/css' href="{% static 'article.css' %}">
     <title>{{article.title}}</title>
   </head>
   <body>
@@ -10,15 +11,6 @@
       <div class="container">
         <div class="logo">
           <a href="#">Logo</a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
     <div class="container">
       <h1 class="title">{{article.title}}</h1>
